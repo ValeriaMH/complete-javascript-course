@@ -192,7 +192,7 @@ if (bmiMark > bmiJohn) {
     console.log(`John's BMI (${bmiJohn}) is higher than Mark's (${bmiMark})!`);
 }
 
-*/
+
 
 //TYPE CONVERSION AND COERCION
 
@@ -214,4 +214,55 @@ console.log('23' - '10' - 3); //The minus operator triggers to Numbers, multiply
 let n = '1' + 1;
 n = n - 1;
 console.log(n);
+
+
+
+//TRUTHY AND FALSY VALUES
+
+//5 falsy values: 0, '', undefined, null, NaN
+
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean('Jonas')); //only empty string is false
+console.log(Boolean({})); //empty object is true
+
+const money = 100;
+if (money) { //JS will try to convert it to a boolean
+    console.log("Don't spend it all ;)");
+} else {
+    console.log('You should get a job!');
+}
+
+let height;
+if (height) {
+    console.log('YAY! Height is defined');
+} else {
+    console.log('Height is UNDEFINED');
+}
+
+*/
+
+//EQUALITY OPERATORS == VS ===
+
+const age = '18';
+if (age === 18) console.log('You just became an adult :D (strict)'); //only when both sides are exactly the same - comparison operator - strict equality operator - no type coercion (it doesn't convert string to numbers) THIS IS BETTER
+if (age == 18) console.log('You just became an adult :D (loose)');
+
+const favourite = Number(prompt("What's your favourite number?"));
+console.log(favourite);
+
+if (favourite === 4) {
+    console.log('Cool! 4 is an amazing number!');
+} else if (favourite === 7) {
+    console.log('7 is also a cool number');
+} else if (favourite === 9) {
+    console.log('9 is also a cool number');
+} else {
+    console.log('Number is not 4 or 7');
+}
+
+if (favourite !== 4) console.log('Why not 4?'); //different to - strict version !==, loose != (don't use it)  
+
+
+
 
