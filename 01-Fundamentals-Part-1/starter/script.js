@@ -240,7 +240,7 @@ if (height) {
     console.log('Height is UNDEFINED');
 }
 
-*/
+
 
 //EQUALITY OPERATORS == VS ===
 
@@ -261,7 +261,151 @@ if (favourite === 4) {
     console.log('Number is not 4 or 7');
 }
 
-if (favourite !== 4) console.log('Why not 4?'); //different to - strict version !==, loose != (don't use it)  
+if (favourite !== 4) console.log('Why not 4?'); //different to - strict version !==, loose != (don't use it)
+
+
+
+//BOOLEAN LOGIC: AND, OR & NOT
+
+//LOGICAL OPERATORS
+
+const hasDriversLicense = true; // A
+const hasGoodVision = true; // B
+
+console.log(hasDriversLicense && hasGoodVision); //&& AND OPERATOR
+console.log(hasDriversLicense || hasGoodVision); //|| OR OPERATOR
+console.log(!hasDriversLicense);
+
+const shouldDrive = hasDriversLicense && hasGoodVision;
+
+// if (shouldDrive) {
+//     console.log('Sarah is able to drive!');
+// } else {
+//     console.log('Someone else should drive...');
+// }
+
+const isTired = true; // C
+console.log(hasDriversLicense || hasGoodVision || isTired);
+
+if (hasDriversLicense && hasGoodVision && !isTired) {
+    console.log('Sarah is able to drive!');
+} else {
+    console.log('Someone else should drive...');
+}
+
+
+
+//CODING CHALLENGE #3
+
+// const averageScoreDolphins = (96 + 108 + 89) / 3;
+// const averageScoreKoalas = (88 + 91 + 110) / 3;
+
+// console.log(averageScoreDolphins);
+// console.log(averageScoreKoalas);
+
+// if (averageScoreDolphins > averageScoreKoalas) {
+//     console.log('Dolphins are the winners!');
+// } else {
+//     console.log('Koalas are the winners!');
+// } // use else if because of the drawer
+
+const averageScoreDolphins = (97 + 112 + 101) / 3;
+const averageScoreKoalas = (109 + 95 + 123) / 3;
+
+if (averageScoreKoalas > averageScoreDolphins && averageScoreKoalas >= 100) {
+    console.log('Koalas are the winners');
+} else if (averageScoreDolphins > averageScoreKoalas && averageScoreDolphins >= 100) {
+    console.log('Dolphins are the winners!');
+} else {
+    console.log('Nobody won :(');
+} // ===
+
+console.log(averageScoreDolphins);
+console.log(averageScoreKoalas);
+
+
+
+//THE SWITCH STATEMENT
+
+const day = 'thursday';
+
+switch (day) {
+    case 'monday': // day === 'monday'
+        console.log('Plan course structure');
+        console.log('Go to coding meetup');
+        break;
+    case 'tuesday':
+        console.log('Prepare theory videos');
+        break;
+    case 'wednesday':
+    case 'thursday':
+        console.log('Write code examples');
+        break;
+    case 'friday':
+        console.log('Record videos');
+        break;
+    case 'saturday':
+    case 'sunday':
+        console.log('Enjoy the weekend :D');
+        break;
+    default:
+        console.log('Not a valid day!');
+}
+
+if (day === 'monday') {
+    console.log('Plan course structure');
+    console.log('Go to coding meetup');
+} else if (day === 'tuesday') {
+    console.log('Prepare theory videos');
+} else if (day === 'wednesday' || day === 'thursday') {
+    console.log('Write code examples');
+} else if (day === 'friday') {
+    console.log('Record videos');
+} else if (day === 'saturday' || day === 'sunday') {
+    console.log('Enjoy the weekend :D');
+} else {
+    console.log('Not a valid day!');
+}
+
+
+
+//STATEMENTS AND EXPRESSIONS
+
+3 + 4 //Expression bc produces a value (words)
+
+if (23 > 10) { //This is a statement, big piece of code
+    const str = '23 is bigger'; // str is an expression
+}
+
+console.log(`I'm ${2037 - 1991} years old`); //only expressions in template literals
+
+
+
+//THE CONDITIONAL (TERNARY) OPERATOR
+
+const age = 23;
+// age >= 18 ? console.log('I like to drink wine') :
+//     console.log('I like to drink water'); //Expression
+
+const drink = age >= 18 ? 'wine' : 'water';
+console.log(drink);
+
+
+
+//CODING CHALLENGE #4
+
+const bill = 430
+const tip = bill <= 300 && bill >= 50 ? (bill * 0.15) : (bill * 0.2); // >= 50 && <+ 300
+
+console.log(tip);
+
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
+
+*/
+
+
+
+
 
 
 
